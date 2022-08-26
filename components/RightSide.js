@@ -22,7 +22,7 @@ const RightSide = () => {
         <div className="grid place-items-center w-full h-full py-4">
 
             {/* Header Logo &&  Icon Link */}
-            <div className="grid place-items-center py-2">
+            <div className="grid place-items-center py-4">
 
                 {/* Header Logo  */}
                 <div className="grid place-items-center w-full py-2 ">
@@ -31,14 +31,14 @@ const RightSide = () => {
                         MyLogo != "" ?
                             <>
                                 <Avatar src={MyLogo}
-                                    className="h-20 w-20 text-2xl mb-4 bg-white border-4 border-indigo-500 shadow-2xl shadow-slate-900" />
+                                    className="h-20 w-20 text-2xl mb-4 bg-white border-4 border-green-600 shadow-2xl shadow-black" />
                             </>
                             :
                             <Avatar className="h-16 w-16 mb-4 text-4xl font-bold">
                                 M
                             </Avatar>
                     }
-                    <h1 className="text-6xl text-white" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
+                    <h1 className="text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
                         Mostafa Mossa
                     </h1>
                 </div>
@@ -71,13 +71,13 @@ const RightSide = () => {
             </div>
 
             {/* Pages Link */}
-            <div className="grid place-items-center w-full h-full py-4">
+            <div className="grid place-items-center w-full h-full py-6">
                 {/* hidden Button */}
                 {
                     router.pathname != '/' ?
                         <Link href="/" passHref>
                             <a className="w-full">
-                                <Button className="text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-indigo-500 hover:font-bold w-full hover:bg-slate-100">
+                                <Button className="text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100">
                                     Home
                                 </Button>
                             </a>
@@ -91,9 +91,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/blog" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-indigo-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-indigo-500 font-bold w-full bg-slate-100"
+                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             blog
                         </Button>
@@ -104,9 +104,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/projects" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-indigo-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-indigo-500 font-bold w-full bg-slate-100"
+                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             projects
                         </Button>
@@ -117,9 +117,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/courses" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-indigo-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-indigo-500 font-bold w-full bg-slate-100"
+                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             courses
                         </Button>
@@ -130,9 +130,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/contact" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-indigo-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-indigo-500 font-bold w-full bg-slate-100"
+                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             contact
                         </Button>
@@ -143,9 +143,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/about" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-indigo-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-indigo-500 font-bold w-full bg-slate-100"
+                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             about
                         </Button>

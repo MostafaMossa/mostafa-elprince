@@ -7,7 +7,7 @@ export default function Document() {
         <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine" />
       </Head>      
-      <body className='bg-gray-700'>
+      <body className='bg-gray-700 h-screen w-full flex'>
         <Main />
         <NextScript />
       </body>

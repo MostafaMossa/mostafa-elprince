@@ -9,21 +9,14 @@ const LayoutPc = ({ children }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Mostafa Elprince</title>
             </Head>
-            <div className="flex h-screen w-full p-4 justify-center items-center">
-                <div className="grid place-items-center w-full h-full p-4">
-                    <div className="flex flex-row h-full w-full space-x-4">
-                        {/* Pages left Side */}
-                        <div className="flex-1 h-full bg-gray-800 shadow-2xl shadow-slate-900 rounded-3xl text-gray-50">
-                            <div className="grid place-items-center w-full h-full py-2">
-                                {children}
-                            </div>
-                        </div>
-
-                        {/* Navbar right side */}
-                        <div className="flex-[0.35] h-full bg-gray-800 shadow-2xl shadow-slate-900 rounded-3xl ">
-                            <RightSide />
-                        </div>
+            <div className="flex place-items-center h-[100vh] w-[100vw] p-4">
+                <div className="flex-1 bg-gray-800 h-full rounded-3xl shadow-2xl shadow-black p-3 mx-4">
+                    <div className="grid place-items-center h-full text-gray-50">
+                        {children}
                     </div>
+                </div>
+                <div className="flex-[0.35] bg-gray-800 h-full rounded-3xl shadow-2xl shadow-black mx-4">
+                    <RightSide />
                 </div>
             </div>
         </>
