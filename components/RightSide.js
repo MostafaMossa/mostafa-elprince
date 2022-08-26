@@ -121,7 +121,7 @@ const RightSide = () => {
                                 :
                                 "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
-                            courses
+                            mobile app
                         </Button>
                     </a>
                 </Link>

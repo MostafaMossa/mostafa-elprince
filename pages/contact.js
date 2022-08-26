@@ -1,7 +1,7 @@
 const contact = () => {
     return (
-        <div>
-            contact page
+        <div className="grid place-items-center p-2">
+            
         </div>
     );
 }

@@ -1,14 +1,23 @@
+import { isBrowser, isMobile } from 'react-device-detect'
 import LayoutPc from '../layouts/LayoutPc'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <LayoutPc>
+  if (isMobile) {
+    return (
+      <>
         <Component {...pageProps} />
-      </LayoutPc>
-    </>
-  )
+      </>
+    )
+  } else if (isBrowser) {
+    return (
+      <>
+        <LayoutPc>
+          <Component {...pageProps} />
+        </LayoutPc>
+      </>
+    )
+  }
 }
 
 export default MyApp
