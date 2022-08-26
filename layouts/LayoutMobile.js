@@ -10,7 +10,7 @@ const LayoutMobile = ({ children }) => {
                 <title>Mostafa Elprince</title>
             </Head>
             <div className="grid place-content-center h-full w-full">
-                <div className="fixed top-0 h-[10vh] w-full">
+                <div className="fixed top-0 h-[40vh] w-full bg-gray-800 shadow-2xl shadow-black">
                     <HeaderSide />
                 </div>
                 <div className="block text-gray-50">
