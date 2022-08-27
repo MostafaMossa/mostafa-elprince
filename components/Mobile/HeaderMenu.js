@@ -38,7 +38,7 @@ const HeaderMenu = () => {
                         </Avatar>
                 }
                 <h1 className="text-3xl sm:text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
-                    Mostafa Mossa
+                    Mostafa Moussa
                 </h1>
             </div>
 

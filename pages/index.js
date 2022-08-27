@@ -1,4 +1,4 @@
-import { DomainVerification, RemoveRedEye } from "@mui/icons-material";
+import { AppSettingsAlt, Architecture, DomainVerification, IntegrationInstructions, RemoveRedEye } from "@mui/icons-material";
 import Image from "next/image";
 import VisitorCounter from "../components/VisitorCounter";
 
@@ -21,11 +21,47 @@ const Home = () => {
           </h1>
           <div className="flex flex-row items-center space-x-2 xl:space-x-4">
             <h1 className="text-gray-300 uppercase text-md xl:text-lg pb-2 pt-1">Website developer</h1>
+            <h1 className="text-gray-300 uppercase text-md xl:text-lg pb-2 pt-1">&</h1>
             <h1 className="text-gray-300 uppercase text-md xl:text-lg pb-2 pt-1">Mobile developer</h1>
           </div>
           <p className="text-gray-50 uppercase max-w-[95%] text-sm xl:text-md">Welcome to my own site. You will find here all the information about my previous work and models that I have implemented. You can also request the design of your site. You can also contact me through social networking links or access my contact page.</p>
         </div>
       </div>
+
+      <div className="grid place-items-center w-full my-4">
+        <h1 className="text-center text-3xl text-gray-50 uppercase mt-10">My Offered Services</h1>
+        <h1 className="text-center text-2xl text-gray-400 ">Find out about our offers and services</h1>
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-2 xl:gap-4 mt-4">
+          <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
+            <h1 className="grid place-items-center py-2">
+              <Architecture className="h-16 w-16" />
+              <span className="text-2xl ">web Design</span>
+            </h1>
+            <span className="text-gray-300 text-xs">
+              Website design with international standards
+            </span>
+          </div>
+          <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-3">
+            <h1 className="grid place-items-center py-2">
+              <IntegrationInstructions className="h-16 w-16" />
+              <span className="text-2xl ">web Development</span>
+            </h1>
+            <span className="text-gray-300 text-xs">
+              Website development at the highest level
+            </span>
+          </div>
+          <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-3">
+            <h1 className="grid place-items-center py-2">
+              <AppSettingsAlt className="h-16 w-16" />
+              <span className="text-2xl ">Apps Development</span>
+            </h1>
+            <span className="text-gray-300 text-xs text-center">
+              Mobile software development with international standards
+            </span>
+          </div>
+        </div>
+      </div>
+
 
       <div className="flex flex-row justify-items-center space-x-4 mt-4">
 
