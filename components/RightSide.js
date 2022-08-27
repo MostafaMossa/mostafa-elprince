@@ -110,11 +110,11 @@ const RightSide = () => {
                         </Button>
                     </a>
                 </Link>
-                <Link href="/courses" passHref>
+                <Link href="/MobileApp" passHref>
                     <a className="w-full">
                         {/* Change Hover Class */}
                         <Button className={
-                            router.pathname != "/courses" ?
+                            router.pathname != "/MobileApp" ?
                                 "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
                                 "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"

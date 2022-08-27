@@ -1,6 +1,5 @@
-import { getApp, getApps, initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
-
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
     apiKey: "AIzaSyB2232NrlLv3LRuO33fDTfhl2ZMJQ6dDM4",
     authDomain: "mostafa-elprince.firebaseapp.com",
@@ -11,10 +10,9 @@ const firebaseConfig = {
     measurementId: "G-9EFSNB0K73"
 }
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
-const db = getFirestore()
-
-export default app
 
 
-export { db }
+
+const app = initializeApp(firebaseConfig)
+
+export const db = getFirestore(app)
