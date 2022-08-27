@@ -1,21 +1,21 @@
+import React, { useState } from "react";
 import { AlternateEmail, PhoneAndroid, Place } from "@mui/icons-material";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import Link from "next/link";
-import { useState } from "react";
 import { db } from "../utils/firebase";
 
 const contact = () => {
     const [contactmedata, setContactmedata] = useState({ fullName: '', emailOrPhone: '', message: '' })
 
-    const handleSubmit = async (e) => {
+    const HandleSubmit = async (e) => {
         e.preventDefault()
         const collectionRef = collection(db, "contactme")
         const docRef = await addDoc(collectionRef, {
             ...contactmedata,
             timestamp: serverTimestamp()
         })
-        alert(`Message has submited ${docRef.id}`)
         setContactmedata({ fullName: '', emailOrPhone: '', message: '' })
+        alert(`Message has submited ${docRef.id}`)
     }
 
     const MyLocationLink = "https://www.google.com/maps/place/31%C2%B015'17.2%22N+29%C2%B059'03.4%22E/@31.2547807,29.9864648,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa4a0996001d0c7ef!8m2!3d31.2547807!4d29.9842761?hl=ar"
@@ -26,7 +26,7 @@ const contact = () => {
         <div className="grid place-items-center p-2 ">
             <div className="grid place-items-center w-full mb-2">
                 <h1 className="text-4xl uppercase font-bold">Contact Me</h1>
-                <form className="w-full mt-4" action="post" onSubmit={handleSubmit}>
+                <form className="w-full mt-4" action="post" onSubmit={HandleSubmit}>
                     <div className="grid md:flex lg:flex md:flex-row lg:flex-row ">
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold ">full Name</span>
