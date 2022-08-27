@@ -1,10 +1,14 @@
 import RightSide from "../components/RightSide";
 import HeaderMenu from '../components/Mobile/HeaderMenu'
+import Head from "next/head";
 
 
 const LayoutPc = ({ children }) => {
     return (
         <>
+            <Head>
+                <title>Mostafa Elprince</title>
+            </Head>
             {/* Mobile view */}
             <div className="grid place-items-center h-full w-full lg:hidden md:hidden">
                 <HeaderMenu />

@@ -1,6 +1,9 @@
-import { LocationCity, PhoneAndroid } from "@mui/icons-material";
+import { PhoneAndroid, Place } from "@mui/icons-material";
+import Link from "next/link";
 
 const contact = () => {
+    const MyLocationLink = "https://www.google.com/maps/place/31%C2%B015'17.2%22N+29%C2%B059'03.4%22E/@31.2547807,29.9864648,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa4a0996001d0c7ef!8m2!3d31.2547807!4d29.9842761?hl=ar"
+    const MyPhoneNumber = "tel:01004400997"
     return (
         <div className="grid place-items-center p-2 ">
             <div className="grid place-items-center w-full mb-2">
@@ -36,12 +39,19 @@ const contact = () => {
                 <div className="grid place-items-center w-full h-full mt-4">
                     <div className="flex flex-row items-center">
                         <PhoneAndroid className="h-6 w-6 mx-2" />
-                        <h1 className="text-gray-50">
-                            010-04400997
-                        </h1>
-                    </div>
-                    <div>
-                        <LocationCity />
+                        <Link href={MyPhoneNumber} passHref>
+                            <a className="text-gray-300 hover:text-green-500" target="_blank">
+                                010-04400997
+                            </a>
+                        </Link>
+                        <div className="flex flex-row items-center ml-10">
+                            <Place className="h-6 w-6 mx-2" />
+                            <Link href={MyLocationLink} passHref>
+                                <a className="text-gray-300 hover:text-green-500" target="_blank">
+                                    Open in GoogleMab
+                                </a>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

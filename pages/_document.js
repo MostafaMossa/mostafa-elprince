@@ -8,7 +8,6 @@ export default function Document() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Tangerine" />
-        <title>Mostafa Elprince</title>
       </Head>
       <body className='bg-gray-700 h-screen w-full md:flex lg:flex'>
         <Main />
