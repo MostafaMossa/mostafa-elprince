@@ -1,20 +1,20 @@
-import React from "react";
 import { AlternateEmail, PhoneAndroid, Place } from "@mui/icons-material";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import Link from "next/link";
+import { useState } from "react";
 import { db } from "../utils/firebase";
 
 const contact = () => {
-    const [contactmedata, setContactmedata] = React.useState({ fullname: '', emailorphone: '', message: '' })
+    const [data, setData] = useState({ fullname: '', emailorphone: '', message: '' })
 
     const HandleSubmit = async (e) => {
         e.preventDefault()
         const collectionRef = collection(db, "contactme")
         const docRef = await addDoc(collectionRef, {
-            ...contactmedata,
+            ...data,
             timestamp: serverTimestamp()
         })
-        setContactmedata({ fullname: '', emailorphone: '', message: '' })
+        setData({ fullname: '', emailorphone: '', message: '' })
         alert(`Message has submited ${docRef.id}`)
     }
 
@@ -31,18 +31,18 @@ const contact = () => {
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold ">full Name</span>
                             <input className="w-full bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                value={contactmedata.fullname} onChange={(e) => setContactmedata({ ...contactmedata, fullname: e.target.value })} type="text" placeholder="Full Name" />
+                                value={data.fullname} onChange={(e) => setData({ ...data, fullname: e.target.value })} type="text" placeholder="Full Name" />
                         </div>
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold">email/Phone number</span>
                             <input className="w-full bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                value={contactmedata.emailorphone} onChange={(e) => setContactmedata({ ...contactmedata, emailorphone: e.target.value })} type="text" placeholder="Email/Phone Number" />
+                                value={data.emailorphone} onChange={(e) => setData({ ...data, emailorphone: e.target.value })} type="text" placeholder="Email/Phone Number" />
                         </div>
                     </div>
                     <div className="mt-6 mx-4">
                         <span className="uppercase text-sm text-gray-300 font-bold">Message</span>
                         <textarea
-                            value={contactmedata.message} onChange={(e) => setContactmedata({ ...contactmedata, message: e.target.value })}
+                            value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })}
                             placeholder="Message"
                             className="w-full h-32 bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
                     </div>
