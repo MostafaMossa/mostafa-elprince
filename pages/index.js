@@ -30,29 +30,29 @@ const Home = () => {
 
       <div className="grid grid-cols-3 gap-4 mt-10">
 
-        <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
+        <div className="grid place-items-center bg-gray-700 border-2 border-green-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
           <h1 className="py-2">
             <VisitorCounter />
           </h1>
           <div className="flex flex-row items-center space-x-1 xl:space-x-2 px-1 xl:px-2">
             <RemoveRedEye />
-            <span>visitors</span>
+            <span className="text-xs xl:text-xl">visitors</span>
           </div>
         </div>
 
-        <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
+        <div className="grid place-items-center bg-gray-700 border-2 border-green-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
           <h1 className="py-2">0</h1>
           <div className="flex flex-row items-center space-x-1 xl:space-x-2 px-1 xl:px-2">
             <DomainVerification />
-            <span className="text-sm xl:text-xl">Projects Completed</span>
+            <span className="text-xs xl:text-xl">Projects Completed</span>
           </div>
         </div>
 
-        <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
+        <div className="grid place-items-center bg-gray-700 border-2 border-green-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
           <h1 className="py-2">0</h1>
           <div className="flex flex-row items-center space-x-1 xl:space-x-2 px-1 xl:px-2">
             <InsertEmoticon />
-            <span>Happy Clients</span>
+            <span className="text-xs xl:text-xl">Happy Clients</span>
           </div>
         </div>
 
@@ -64,7 +64,7 @@ const Home = () => {
         <h1 className="text-center text-3xl text-gray-50 uppercase mt-10">My Offered Services</h1>
         <h1 className="text-center text-2xl text-gray-400 ">Find out about our offers and services</h1>
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-2 xl:gap-4 mt-4">
-          <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
+          <div className="grid place-items-center bg-gray-700 border-2 border-green-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
             <h1 className="grid place-items-center py-2">
               <Architecture className="h-16 w-16" />
               <span className="text-2xl ">web Design</span>
@@ -73,7 +73,7 @@ const Home = () => {
               Website design with international standards
             </span>
           </div>
-          <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-3">
+          <div className="grid place-items-center bg-gray-700 border-2 border-green-600 shadow-slate-800 shadow-2xl rounded-2xl p-3">
             <h1 className="grid place-items-center py-2">
               <IntegrationInstructions className="h-16 w-16" />
               <span className="text-2xl ">web Development</span>
@@ -82,7 +82,7 @@ const Home = () => {
               Website development at the highest level
             </span>
           </div>
-          <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-3">
+          <div className="grid place-items-center bg-gray-700 border-2 border-green-600 shadow-slate-800 shadow-2xl rounded-2xl p-3">
             <h1 className="grid place-items-center py-2">
               <AppSettingsAlt className="h-16 w-16" />
               <span className="text-2xl ">Apps Development</span>
