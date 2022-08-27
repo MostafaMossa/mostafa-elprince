@@ -5,23 +5,17 @@ import { useState } from "react";
 import { db } from "../utils/firebase";
 
 const contact = () => {
-    const [fullName, setFullName] = useState()
-    const [emailOrPhone, setEmailOrPhone] = useState()
-    const [message, setMessage] = useState()
+    const [contactmedata, setContactmedata] = useState({ fullName: '', emailOrPhone: '', message: '' })
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const collectionRef = collection(db, "contactme")
         const docRef = await addDoc(collectionRef, {
-            FullName: fullName,
-            EmailOrPhone: emailOrPhone,
-            Message: message,
+            ...contactmedata,
             timestamp: serverTimestamp()
         })
         alert(`Message has submited ${docRef.id}`)
-        setFullName('')
-        setEmailOrPhone('')
-        setMessage('')
+        setContactmedata({ fullName: '', emailOrPhone: '', message: '' })
     }
 
     const MyLocationLink = "https://www.google.com/maps/place/31%C2%B015'17.2%22N+29%C2%B059'03.4%22E/@31.2547807,29.9864648,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xa4a0996001d0c7ef!8m2!3d31.2547807!4d29.9842761?hl=ar"
@@ -37,18 +31,18 @@ const contact = () => {
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold ">full Name</span>
                             <input className="w-full bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder="Full Name" />
+                                value={contactmedata.fullName} onChange={(e) => setContactmedata({ ...contactmedata, fullName: e.target.value })} type="text" placeholder="Full Name" />
                         </div>
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold">email/Phone number</span>
                             <input className="w-full bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                value={emailOrPhone} onChange={(e) => setEmailOrPhone(e.target.value)} type="text" placeholder="Email/Phone Number" />
+                                value={contactmedata.emailOrPhone} onChange={(e) => setContactmedata({ ...contactmedata, emailOrPhone: e.target.value })} type="text" placeholder="Email/Phone Number" />
                         </div>
                     </div>
                     <div className="mt-6 mx-4">
                         <span className="uppercase text-sm text-gray-300 font-bold">Message</span>
                         <textarea
-                            value={message} onChange={(e) => setMessage(e.target.value)}
+                            value={contactmedata.message} onChange={(e) => setContactmedata({ ...contactmedata, message: e.target.value })}
                             placeholder="Message"
                             className="w-full h-32 bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
                     </div>
