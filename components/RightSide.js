@@ -38,7 +38,7 @@ const RightSide = () => {
                                 M
                             </Avatar>
                     }
-                    <h1 className="text-3xl md:text-4xl lg:text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
+                    <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
                         Mostafa Mossa
                     </h1>
                 </div>

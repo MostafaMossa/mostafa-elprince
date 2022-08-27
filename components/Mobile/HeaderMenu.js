@@ -22,7 +22,7 @@ const HeaderMenu = () => {
     }
 
     return (
-        <div className="w-full bg-slate-800 grid place-items-center pt-2 shadow-2xl shadow-gray-800">
+        <div className="bg-slate-800 grid place-items-center pt-2 shadow-2xl shadow-gray-800 w-[100vw] h-[100%]">
             <div className="grid place-items-center w-full py-3">
 
                 {/* Change Logo Betwen Image Or M */}
@@ -37,7 +37,7 @@ const HeaderMenu = () => {
                             M
                         </Avatar>
                 }
-                <h1 className="text-5xl lg:text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
+                <h1 className="text-3xl sm:text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
                     Mostafa Mossa
                 </h1>
             </div>
