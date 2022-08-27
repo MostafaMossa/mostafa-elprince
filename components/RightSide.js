@@ -19,51 +19,51 @@ const RightSide = () => {
 
     return (
         // All Right side 
-        <div className="grid place-items-center w-full h-full py-4">
+        <div className="grid place-items-center w-full h-[80%] md:h-[90%] lg:h-full py-0 md:py-1 lg:py-4">
 
             {/* Header Logo &&  Icon Link */}
-            <div className="grid place-items-center py-4">
+            <div className="grid place-items-center py-0 md:py-0 lg:py-4">
 
                 {/* Header Logo  */}
-                <div className="grid place-items-center w-full py-2 ">
+                <div className="grid place-items-center w-full py-0 md:py-1 lg:py-2 ">
                     {/* Change Logo Betwen Image Or M */}
                     {
                         MyLogo != "" ?
                             <>
                                 <Avatar src={MyLogo}
-                                    className="h-20 w-20 text-2xl mb-4 bg-white border-4 border-green-600 shadow-2xl shadow-black" />
+                                    className="h-14 md:h-16 lg:h-20 w-14 md:w-16 lg:w-20 text-2xl mb-4 bg-white border-4 border-green-600 shadow-2xl shadow-black" />
                             </>
                             :
                             <Avatar className="h-16 w-16 mb-4 text-4xl font-bold">
                                 M
                             </Avatar>
                     }
-                    <h1 className="text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl text-green-400" style={{ fontFamily: 'Tangerine', textShadow: '4px 4px 4px #aaa' }}>
                         Mostafa Mossa
                     </h1>
                 </div>
 
                 {/* Icon Links */}
                 <div className="grid place-items-center w-full">
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-2 lg:space-x-4">
                         <Link href={FacebookLink} passHref>
                             <IconButton >
-                                <FacebookOutlined className="h-10 w-10 text-white  hover:text-blue-600 hover:bg-white rounded-full" />
+                                <FacebookOutlined className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-blue-600 hover:bg-white rounded-full" />
                             </IconButton>
                         </Link>
                         <Link href={TwitterLink} passHref>
                             <IconButton className="">
-                                <Twitter className="h-10 w-10 text-white  hover:text-blue-300 hover:bg-white rounded-full" />
+                                <Twitter className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-blue-300 hover:bg-white rounded-full" />
                             </IconButton>
                         </Link>
                         <Link href={GitHubLink} passHref>
                             <IconButton className="">
-                                <GitHub className="h-10 w-10 text-white  hover:text-black hover:bg-gray-50 rounded-full" />
+                                <GitHub className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-black hover:bg-gray-50 rounded-full" />
                             </IconButton>
                         </Link>
                         <Link href={WhatsAppLink} passHref>
                             <IconButton className="">
-                                <WhatsApp className="h-10 w-10 text-white  hover:text-green-600 hover:bg-gray-50 rounded-full" />
+                                <WhatsApp className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-green-600 hover:bg-gray-50 rounded-full" />
                             </IconButton>
                         </Link>
                     </div>
@@ -71,29 +71,27 @@ const RightSide = () => {
             </div>
 
             {/* Pages Link */}
-            <div className="grid place-items-center w-full h-full py-6">
-                {/* hidden Button */}
-                {
-                    router.pathname != '/' ?
-                        <Link href="/" passHref>
-                            <a className="w-full">
-                                <Button className="text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100">
-                                    Home
-                                </Button>
-                            </a>
-                        </Link>
-                        :
-                        <></>
-                }
-
-                <Link href="/blog" passHref>
+            <div className="grid place-items-center w-full h-[80%] md:h-[90%] lg:h-full py-0 lg:py-6">
+                <Link href="/" passHref>
                     <a className="w-full">
                         {/* Change Hover Class */}
                         <Button className={
-                            router.pathname != "/blog" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                            router.pathname != "/" ?
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                        }>
+                            home
+                        </Button>
+                    </a>
+                </Link>
+                <Link href="/blog" passHref>
+                    <a className="w-full">
+                        <Button className={
+                            router.pathname != "/blog" ?
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                :
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             blog
                         </Button>
@@ -104,9 +102,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/projects" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             projects
                         </Button>
@@ -117,9 +115,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/courses" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             mobile app
                         </Button>
@@ -130,9 +128,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/contact" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             contact
                         </Button>
@@ -143,9 +141,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/about" ?
-                                "text-white text-xl hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
                                 :
-                                "text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
                         }>
                             about
                         </Button>

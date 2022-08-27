@@ -1,26 +1,13 @@
-import { isDesktop, isMobile } from 'react-device-detect';
-import LayoutMobile from '../layouts/LayoutMobile';
-import LayoutPc from '../layouts/LayoutPc';
+import LayoutPc from '../layouts/Layout';
 import '../styles/globals.css'
 
 
 const MyApp = ({ Component, propPage }) => {
-
-  if (isDesktop) {
-    return (
-      <>
-        <LayoutPc>
-          <Component {...propPage} />
-        </LayoutPc>
-      </>
-    );
-  }
-
-  if (isMobile) {
-    <LayoutMobile>
+  return (
+    <LayoutPc>
       <Component {...propPage} />
-    </LayoutMobile>
-  }
+    </LayoutPc>
+  )
 }
 
 export default MyApp;
