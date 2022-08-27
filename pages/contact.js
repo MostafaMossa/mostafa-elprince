@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { AlternateEmail, PhoneAndroid, Place } from "@mui/icons-material";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import Link from "next/link";
 import { db } from "../utils/firebase";
 
 const contact = () => {
-    const [contactmedata, setContactmedata] = useState({ fullName: '', emailOrPhone: '', message: '' })
+    const [contactmedata, setContactmedata] = React.useState({ fullname: '', emailorphone: '', message: '' })
 
     const HandleSubmit = async (e) => {
         e.preventDefault()
@@ -14,7 +14,7 @@ const contact = () => {
             ...contactmedata,
             timestamp: serverTimestamp()
         })
-        setContactmedata({ fullName: '', emailOrPhone: '', message: '' })
+        setContactmedata({ fullname: '', emailorphone: '', message: '' })
         alert(`Message has submited ${docRef.id}`)
     }
 
@@ -31,12 +31,12 @@ const contact = () => {
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold ">full Name</span>
                             <input className="w-full bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                value={contactmedata.fullName} onChange={(e) => setContactmedata({ ...contactmedata, fullName: e.target.value })} type="text" placeholder="Full Name" />
+                                value={contactmedata.fullname} onChange={(e) => setContactmedata({ ...contactmedata, fullname: e.target.value })} type="text" placeholder="Full Name" />
                         </div>
                         <div className="mx-4">
                             <span className="uppercase text-sm text-gray-300 font-bold">email/Phone number</span>
                             <input className="w-full bg-gray-500 text-gray-50 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                                value={contactmedata.emailOrPhone} onChange={(e) => setContactmedata({ ...contactmedata, emailOrPhone: e.target.value })} type="text" placeholder="Email/Phone Number" />
+                                value={contactmedata.emailorphone} onChange={(e) => setContactmedata({ ...contactmedata, emailorphone: e.target.value })} type="text" placeholder="Email/Phone Number" />
                         </div>
                     </div>
                     <div className="mt-6 mx-4">
