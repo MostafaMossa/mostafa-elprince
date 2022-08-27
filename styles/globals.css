@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+
+
+textarea {
+    resize: none;
+}

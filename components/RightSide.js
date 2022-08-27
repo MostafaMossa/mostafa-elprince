@@ -47,22 +47,22 @@ const RightSide = () => {
                 <div className="grid place-items-center w-full">
                     <div className="flex space-x-2 lg:space-x-4">
                         <Link href={FacebookLink} passHref>
-                            <IconButton >
+                            <IconButton target="_blank">
                                 <FacebookOutlined className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-blue-600 hover:bg-white rounded-full" />
                             </IconButton>
                         </Link>
                         <Link href={TwitterLink} passHref>
-                            <IconButton className="">
+                            <IconButton target="_blank">
                                 <Twitter className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-blue-300 hover:bg-white rounded-full" />
                             </IconButton>
                         </Link>
                         <Link href={GitHubLink} passHref>
-                            <IconButton className="">
+                            <IconButton target="_blank">
                                 <GitHub className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-black hover:bg-gray-50 rounded-full" />
                             </IconButton>
                         </Link>
                         <Link href={WhatsAppLink} passHref>
-                            <IconButton className="">
+                            <IconButton target="_blank">
                                 <WhatsApp className="h-6 md:h-8 lg:h-10 w-6 md:w-8 lg:w-10 text-white  hover:text-green-600 hover:bg-gray-50 rounded-full" />
                             </IconButton>
                         </Link>
@@ -77,9 +77,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/" ?
-                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
-                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"
                         }>
                             home
                         </Button>
@@ -89,9 +89,9 @@ const RightSide = () => {
                     <a className="w-full">
                         <Button className={
                             router.pathname != "/blog" ?
-                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
-                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"
                         }>
                             blog
                         </Button>
@@ -102,9 +102,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/projects" ?
-                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
-                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"
                         }>
                             projects
                         </Button>
@@ -115,9 +115,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/courses" ?
-                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
-                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"
                         }>
                             mobile app
                         </Button>
@@ -128,9 +128,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/contact" ?
-                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
-                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"
                         }>
                             contact
                         </Button>
@@ -141,9 +141,9 @@ const RightSide = () => {
                         {/* Change Hover Class */}
                         <Button className={
                             router.pathname != "/about" ?
-                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-slate-100"
+                                "text-white text-md lg:text-xl hover:text-lg md:hover:text-xl lg:hover:text-2xl hover:shadow-3xl hover:shadow-slate-900 hover:text-green-500 hover:font-bold w-full hover:bg-gray-500"
                                 :
-                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-slate-100"
+                                "text-md md:text-lg lg:text-2xl shadow-3xl shadow-slate-900 text-green-500 font-bold w-full bg-gray-500"
                         }>
                             about
                         </Button>
