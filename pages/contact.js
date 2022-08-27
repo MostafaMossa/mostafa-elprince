@@ -39,14 +39,16 @@ const contact = () => {
             <div className="grid place-items-start w-full mt-3">
                 <h1 className="uppercase text-2xl">contact information</h1>
                 <div className="grid place-items-center w-full h-full mt-4">
-                    <div className="flex flex-row items-center">
-                        <PhoneAndroid className="h-6 w-6 mx-2" />
-                        <Link href={MyPhoneNumber} passHref>
-                            <a className="text-gray-300 hover:text-green-500" target="_blank">
-                                010-04400997
-                            </a>
-                        </Link>
-                        <div className="flex flex-row items-center ml-10">
+                    <div className="grid place-items-center space-y-4 md:space-y-0 lg:space-y-0 md:flex lg:flex md:flex-row lg:flex-row md:items-center lg:items-center">
+                        <div className="flex flex-row items-center ">
+                            <PhoneAndroid className="h-6 w-6 mx-2" />
+                            <Link href={MyPhoneNumber} passHref>
+                                <a className="text-gray-300 hover:text-green-500" target="_blank">
+                                    010-04400997
+                                </a>
+                            </Link>
+                        </div>
+                        <div className="flex flex-row items-center ml-0 md:ml-10 lg:ml-10">
                             <Place className="h-6 w-6 mx-2" />
                             <Link href={MyLocationLink} passHref>
                                 <a className="text-gray-300 hover:text-green-500" target="_blank">
@@ -54,7 +56,7 @@ const contact = () => {
                                 </a>
                             </Link>
                         </div>
-                        <div className="flex flex-row items-center ml-10">
+                        <div className="flex flex-row items-center ml-0 md:ml-10 lg:ml-10">
                             <AlternateEmail className="h-6 w-6 mx-2" />
                             <Link href={MyEmailAddress} passHref>
                                 <a className="text-gray-300 hover:text-green-500" target="_blank">
