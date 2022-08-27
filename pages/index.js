@@ -34,7 +34,7 @@ const Home = () => {
           <h1 className="py-2">
             <VisitorCounter />
           </h1>
-          <div className="flex flex-row space-x-2 px-2">
+          <div className="flex flex-row items-center space-x-1 xl:space-x-2 px-1 xl:px-2">
             <RemoveRedEye />
             <span>visitors</span>
           </div>
@@ -42,15 +42,15 @@ const Home = () => {
 
         <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
           <h1 className="py-2">0</h1>
-          <div className="flex flex-row space-x-2 px-2">
+          <div className="flex flex-row items-center space-x-1 xl:space-x-2 px-1 xl:px-2">
             <DomainVerification />
-            <span>Projects Completed</span>
+            <span className="text-sm xl:text-xl">Projects Completed</span>
           </div>
         </div>
 
         <div className="grid place-items-center bg-gray-700 border-2 border-gray-600 shadow-slate-800 shadow-2xl rounded-2xl p-2">
           <h1 className="py-2">0</h1>
-          <div className="flex flex-row space-x-2 px-2">
+          <div className="flex flex-row items-center space-x-1 xl:space-x-2 px-1 xl:px-2">
             <InsertEmoticon />
             <span>Happy Clients</span>
           </div>
